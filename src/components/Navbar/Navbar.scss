@@ -1,0 +1,80 @@
+@import "../../utils/variables.scss";
+
+.navbar {
+  width: 100%;
+  height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $deep_sea;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11111;
+
+  .container {
+    max-width: 1600px;
+    padding: 0 30px;
+  }
+
+  .flex {
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    span {
+      color: $deep_yellow;
+      font-size: $font28;
+      font-weight: 700;
+    }
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    align-items: center;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .menu {
+        font-size: $font15;
+        font-weight: 400;
+        cursor: pointer;
+        text-decoration: none;
+        color: $white;
+
+        &:hover {
+          color: $deep_yellow;
+        }
+      }
+      .button {
+        padding: 15px 0;
+        width: 117px;
+        font-size: $font15;
+      }
+    }
+  }
+
+  .menu_bar {
+    width: 40px;
+    height: 40px;
+    border: 2px solid $white;
+    border-radius: 5px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.sidebar {
+  display: none;
+}

@@ -1,0 +1,109 @@
+@import "../../utils/variables.scss";
+
+.schedule {
+  padding: 100px 0;
+
+  .flex {
+    align-items: center;
+
+    .right {
+      max-width: 645px;
+      width: 100%;
+      position: relative;
+
+      .dr_card {
+        flex-direction: row-reverse;
+        position: absolute;
+        top: 150px;
+        left: 0;
+
+        .deep_yellow {
+          background: $deep_yellow;
+          color: $white;
+        }
+      }
+
+      .img_wrapper {
+        display: flex;
+        justify-content: flex-end;
+        img {
+          max-width: 500px;
+        }
+      }
+    }
+
+    .left {
+      width: calc(100% - 645px);
+
+      .schedule_title {
+        padding-left: 130px;
+        margin-bottom: 30px;
+      }
+
+      .schedule_card {
+        max-width: 412px;
+        width: 100%;
+        border-bottom: 1px solid $gray;
+        padding: 30px 0;
+
+        .flex {
+          gap: 100px;
+
+          .time {
+            color: $red;
+          }
+
+          .content {
+            .title {
+              font-size: $font20;
+              font-weight: 500;
+              font-family: $poppins;
+              margin-bottom: 15px;
+            }
+            .name {
+              font-size: $font16;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .swiper {
+    max-height: 660px;
+    padding-left: 130px;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      box-shadow: $shadow;
+      background: $deep_sky_blue;
+      box-shadow: $sky_blue_shadow;
+
+      &::after {
+        font-size: 15px;
+        font-weight: 800;
+        color: $white;
+        transform: rotate(-90deg);
+      }
+    }
+
+    .swiper-button-prev {
+      left: 10px;
+      right: auto;
+      margin-top: 20px;
+      //   bottom: 50%;
+      //   transform: translateY(-50%);
+    }
+
+    .swiper-button-next {
+      left: 10px;
+      right: auto;
+      top: 45%;
+      transform: translateY(-55%);
+    }
+  }
+}

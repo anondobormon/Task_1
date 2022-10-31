@@ -1,0 +1,71 @@
+@import "../../utils/variables.scss";
+
+.testimonial {
+  max-width: 1300px;
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 43px 0 128px 0;
+  background-image: linear-gradient(
+      rgba(110, 39, 224, 0.81),
+      rgba(110, 39, 224, 0.81)
+    ),
+    url(../../assets/bg2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $white;
+
+  .title {
+    text-align: center;
+    color: $white;
+  }
+
+  .swiper {
+    max-width: 965px;
+    border: 1px solid reddit;
+
+    margin-top: 49px;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: $white;
+      font-weight: 800;
+      font-size: 44px;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      max-width: 680px;
+      margin: 0 auto;
+      gap: 68px;
+
+      .img_wrapper {
+        max-width: 224px;
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .content {
+        p {
+          font-weight: 300;
+          margin-bottom: 32px;
+        }
+
+        .name {
+          font-size: $font13;
+          font-weight: 600;
+        }
+
+        .designation {
+          font-size: $font16;
+          font-weight: 300;
+          color: $deep_yellow;
+        }
+      }
+    }
+  }
+}

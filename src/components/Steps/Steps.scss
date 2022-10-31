@@ -1,0 +1,96 @@
+@import "../../utils/variables.scss";
+
+.steps {
+  padding: 100px 0;
+  .flex {
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    .right {
+      max-width: 520px;
+      width: 100%;
+
+      .title {
+        font-weight: 700;
+        color: #273240;
+      }
+
+      .flex {
+        justify-content: start;
+        gap: 30px;
+        margin-bottom: 15px;
+
+        .icon_wrapper {
+          font-size: 27px;
+          color: $deep_yellow;
+        }
+      }
+    }
+
+    .left {
+      width: calc(100% - 520px);
+      position: relative;
+      padding: 0 20px;
+
+      img {
+        max-width: 626px;
+        width: 100%;
+      }
+
+      .card_right {
+        position: absolute;
+        right: 20px;
+        bottom: 100px;
+      }
+      .card_left {
+        position: absolute;
+        left: -10px;
+        top: 20px;
+      }
+    }
+  }
+}
+
+.dr_card {
+  width: 270px;
+  border-radius: 50px;
+  box-shadow: $shadow;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 7px;
+  background: $white;
+
+  .icon_wrapper {
+    width: 62px;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 28px;
+
+    &.sky_blue {
+      color: $white;
+      background: $deep_sky_blue;
+    }
+    &.purple {
+      color: $white;
+      background: $purple;
+    }
+  }
+
+  .content {
+    color: $deep_sea;
+    .title {
+      font-size: 13px;
+      font-weight: 600;
+      font-family: $poppins;
+    }
+    .des {
+      font-size: 15px;
+      font-weight: 500;
+    }
+  }
+}

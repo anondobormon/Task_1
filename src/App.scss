@@ -1,0 +1,617 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@import "./utils/variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+  transition: 0.3s ease;
+}
+
+.container {
+  max-width: 1320px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+.title {
+  font-size: $font32;
+  font-weight: 700;
+  font-family: $poppins;
+  color: $deep_sea;
+}
+
+p,
+.sub_title {
+  font-family: "Open Sans";
+  font-weight: 500;
+  font-size: $font16;
+  line-height: 28px;
+}
+
+.sub_title {
+  max-width: 814px;
+  margin: 0 auto;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 44px;
+  border: 1px solid $deep_yellow;
+  background: $deep_yellow;
+  border-radius: 6px;
+  color: $white;
+  cursor: pointer;
+
+  &.button_outline {
+    color: $deep_yellow;
+    background: $white;
+  }
+  &.button_sky_blue {
+    border: 1px solid $deep_sky_blue;
+    background: $deep_sky_blue;
+  }
+  &.button_purple {
+    border: 1px solid $purple;
+    background: $purple;
+  }
+}
+
+.space25 {
+  width: 25px;
+  height: 25px;
+}
+.space50 {
+  width: 50px;
+  height: 50px;
+}
+.space75 {
+  width: 75px;
+  height: 75px;
+}
+.space100 {
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  p {
+    font-size: $font15;
+  }
+
+  .hero {
+    .dotgray {
+      left: 30px !important;
+      top: -20px !important;
+    }
+  }
+
+  .steps {
+    .left {
+      flex: 1;
+
+      .card_left {
+        top: 50% !important;
+        transform: translateY(-50%);
+      }
+    }
+    .right {
+      flex: 1;
+    }
+  }
+
+  .schedule {
+    .flex {
+      .right {
+        flex: 1.2;
+      }
+
+      .left {
+        flex: 1;
+        .schedule_title {
+          padding-left: 80px;
+        }
+        .swiper {
+          padding-left: 80px;
+        }
+        .schedule_card {
+          padding: 20px 0 !important;
+
+          .flex {
+            gap: 20px !important;
+            align-items: flex-start;
+
+            .content {
+              .title {
+                font-size: 18px !important;
+                margin-bottom: 0 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .care {
+    .button {
+      font-size: $font16;
+    }
+  }
+
+  .count {
+    .flex {
+      .icon_wrapper {
+        font-size: $font50 !important;
+      }
+
+      .client_count,
+      .title {
+        font-size: $font28 !important;
+      }
+    }
+  }
+
+  .events {
+    .event_items {
+      .card {
+        .img_wrapper {
+          flex: 1;
+        }
+        .content {
+          flex: 1;
+          padding: 36px 31px;
+
+          .sub_title {
+            font-size: $font20;
+          }
+
+          .time {
+            font-size: $font15;
+          }
+          .icon_wrapper {
+            font-size: $font15;
+          }
+        }
+      }
+    }
+  }
+
+  .subscribe {
+    .subscribe_bg {
+      .img {
+        z-index: 0;
+      }
+    }
+
+    .content {
+      z-index: 1;
+      color: $deep_sea;
+
+      .title {
+        color: $deep_sea !important;
+      }
+    }
+  }
+
+  .footer {
+    padding-top: 100px;
+
+    .flex {
+      gap: 20px;
+    }
+
+    .middle {
+      gap: 40px;
+    }
+  }
+
+  .navbar {
+    .menu-items {
+      display: none;
+    }
+
+    .menu_bar {
+      display: flex;
+    }
+  }
+  .sidebar {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    top: 104px;
+    left: 0;
+    z-index: 111;
+    display: flex;
+    justify-content: flex-end;
+    visibility: hidden;
+    opacity: 0;
+
+    .items {
+      max-width: 400px;
+      width: 100%;
+      height: 100%;
+      background: $deep_sea;
+      color: $white;
+      transform: translateX(400px);
+
+      ul {
+        list-style: none;
+
+        li {
+          padding: 10px 30px;
+          text-align: right;
+          cursor: pointer;
+
+          &:hover {
+            background: $deep_yellow;
+          }
+        }
+      }
+    }
+
+    &.toggle {
+      visibility: visible;
+      opacity: 1;
+
+      .items {
+        transform: translateX(0px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .title {
+    font-size: $font20;
+  }
+
+  p,
+  .sub_title {
+    font-size: $font15;
+  }
+
+  .dr_card {
+    width: 220px;
+    .icon_wrapper {
+      width: 50px;
+      height: 50px;
+      font-size: $font20;
+    }
+    .des {
+      font-size: $font13 !important;
+    }
+  }
+
+  .hero {
+    height: 80vh;
+
+    .hero_title {
+      font-size: $font32 !important;
+    }
+
+    .flex {
+      flex-direction: column;
+    }
+    .right {
+      display: none;
+    }
+    .left {
+      text-align: center;
+      padding-top: 50px;
+      min-height: fit-content;
+
+      .button {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .steps {
+    .left {
+      .card_left {
+        top: 35% !important;
+        transform: translateY(-65%);
+      }
+    }
+  }
+
+  .schedule {
+    .title {
+      text-align: center;
+    }
+    .schedule_flex {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .flex {
+      .left {
+        margin: 0 auto;
+        width: 100% !important;
+
+        .schedule_title {
+          padding-left: 0;
+        }
+        .swiper {
+          padding-right: 20px;
+          margin: 0 auto;
+          max-width: 400px;
+        }
+
+        .time {
+          font-size: $font28;
+        }
+        .name {
+          font-size: $font15;
+        }
+      }
+    }
+
+    .right {
+      .img_wrapper {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .care {
+    .button {
+      font-size: $font15;
+      text-align: center;
+    }
+
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .count {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+  }
+
+  .testimonial {
+    padding: 43px 0 50px 0;
+    .card {
+      max-width: 600px !important;
+    }
+  }
+
+  .events {
+    .event_items {
+      .card {
+        flex-direction: column;
+        .img_wrapper {
+          width: 100%;
+          max-width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 100%;
+          }
+        }
+        .content {
+          width: 100%;
+        }
+      }
+      .flex_reverse {
+        flex-direction: column !important;
+      }
+    }
+  }
+
+  .footer {
+    .middle {
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 758px) {
+  .steps {
+    text-align: center;
+    .flex {
+      flex-direction: column;
+    }
+    .left {
+      width: 100% !important;
+    }
+  }
+
+  .schedule {
+    .flex {
+      .left {
+        .schedule_title {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+
+  .testimonial {
+    .swiper {
+      .card {
+        gap: 20px;
+        flex-direction: column;
+        padding: 0 50px;
+        text-align: center;
+
+        .img_wrapper {
+          max-width: 150px;
+        }
+      }
+    }
+  }
+
+  .events {
+    .event_items {
+      .card {
+        text-align: center;
+        .content {
+          .sub_title {
+            text-align: center;
+          }
+          .btn_area {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
+  .subscribe {
+    margin-top: calc(196px);
+    position: relative;
+
+    .circle {
+      right: 0;
+      top: -30%;
+      position: absolute;
+    }
+
+    .subscribe_bg {
+      padding: 20px;
+
+      .img_wrapper {
+        display: none;
+      }
+
+      .content {
+        .title {
+          font-size: $font20;
+          color: $white !important;
+        }
+
+        .sub_title {
+          color: $white;
+        }
+
+        form {
+          input[type="email"] {
+            width: calc(100% - 104px);
+          }
+
+          .button {
+            width: 100px;
+            height: 46px;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    text-align: center;
+
+    .flex {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+    .left,
+    .middle,
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .middle {
+      flex-direction: column;
+    }
+
+    .copy_write {
+      .sub_title {
+        text-align: center;
+      }
+    }
+  }
+
+  .navbar {
+    ul {
+      .button {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .schedule {
+    padding: 0 0;
+    .flex {
+      .left {
+        .schedule_card {
+          .flex {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
+  .care {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .count {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .events {
+    .event_items {
+      .card {
+        text-align: center;
+        .content {
+          .details {
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}

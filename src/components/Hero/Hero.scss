@@ -1,0 +1,68 @@
+@import "../../utils/variables.scss";
+
+.hero {
+  // height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 85px 0 0 0;
+
+  .container {
+    position: relative;
+
+    .dotgray {
+      left: 20px;
+      top: 50px;
+      position: absolute;
+    }
+  }
+
+  .circlehalf {
+    position: absolute;
+    top: 167px;
+    left: 0;
+  }
+
+  .flex {
+    gap: 30px;
+    align-items: center;
+
+    .left {
+      max-width: 378px;
+      width: 100%;
+      padding-top: 150px;
+      min-height: 500px;
+
+      .hero_title {
+        font-size: $font40;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+      }
+      p {
+        font-size: $font14;
+      }
+    }
+
+    .right {
+      width: calc(100% - 378px);
+
+      .flex {
+        align-items: center;
+        justify-content: space-between;
+
+        .img_wrapper {
+          img {
+            max-width: 479px;
+            width: 100%;
+          }
+
+          &:nth-child(1) {
+            margin-left: 60px;
+            margin-top: 91px;
+          }
+        }
+      }
+    }
+  }
+}
